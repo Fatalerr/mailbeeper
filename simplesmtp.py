@@ -100,17 +100,17 @@ if __name__ == "__main__":
 
     server = SMTPServer()
     server.host = 'smtp.163.com'
-    server.user = 'smartchecker@163.com'
-    server.password = "justdumptome1"
-    server.from_name = "PSChecker <smartchecker@163.com>"
+    server.user = 'test@163.com'
+    server.password = "password"
+    server.from_name = "PSChecker <test@163.com>"
     # msg = MIMEText("This mail is send by Python SMTP sendmail text 1",'plain')
     # msg['From'] = "Robert <%s>" % server.user
-    # msg['To'] = 'jun1.liu@nokia.com'
+    # msg['To'] = 'whom@fake.com'
     # msg['Subject'] = Header("Python SMTP txt1",'utf-8')
     msg = MailCreator()
     msg.add_field('From', server.from_name)
-    msg.add_field('To','jun1.liu@nokia.com')
+    msg.add_field('To','whom@fake.com')
     msg.add_field('Subject',"Hello from python smtp!")
 
     server.connect()
-    server.sendmail(['jun1.liu@nokia.com'],msg.as_string())    
+    server.sendmail(['whom@fake.com'],msg.as_string())    

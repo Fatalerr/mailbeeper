@@ -13,7 +13,7 @@ Usage:
         mail=MailMessage(msg)
         replymail = ReplyMail(mail)
         replymail.set_subject("a brand new python module")
-        replyMail.add_to_addr('Liu Jun')
+        replyMail.add_to_addr('Mr Zhang')
 
         smtpsrv = init_mail_server('SMTP',account)
 

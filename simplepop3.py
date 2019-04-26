@@ -220,7 +220,7 @@ class POPServer(MailReceiver):
        host   host url 
        user     username
        
-    server = POPServer(host='pop3.163.com',user='gdgprs')
+    server = POPServer(host='pop3.163.com',user='tester')
     server.set_password('xxxx')
     messages = server.fetch_mails()
 
@@ -390,8 +390,8 @@ if __name__ == "__main__":
     if sys.argv[1] == "server":
         server = POPServer()
         server.host = 'pop3.163.com'
-        server.user = 'gdgprs@163.com'
-        server.password = "nsngmcc1122"
+        server.user = 'test@163.com'
+        server.password = "test"
     else:
         server=MailFiler(sys.argv[1])
 
